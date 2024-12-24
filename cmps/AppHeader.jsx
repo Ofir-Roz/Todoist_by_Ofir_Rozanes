@@ -42,10 +42,7 @@ export function AppHeader() {
                     </section>
                 )}
                 <nav className="app-nav">
-                    <NavLink to="/" >Home</NavLink>
-                    <NavLink to="/about" >About</NavLink>
                     <NavLink to="/todo" >Todos</NavLink>
-                    <NavLink to="/dashboard" >Dashboard</NavLink>
                 </nav>
             </section>
             <UserMsg />
