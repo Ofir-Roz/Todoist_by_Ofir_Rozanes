@@ -29,6 +29,13 @@ function query(filterBy = {}) {
                 todos = todos.filter(todo => todo.importance >= filterBy.importance)
             }
 
+            if (filterBy.isDone && filterBy.isDone !== "all") {
+                todos = todos.filter((todo) => {
+                    const isDone = JSON.stringify(todo.isDone)
+                    return isDone === filterBy.isDone
+                });
+            }
+
             return todos
         })
 }
